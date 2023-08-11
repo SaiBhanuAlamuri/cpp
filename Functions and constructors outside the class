@@ -1,0 +1,40 @@
+# cpp
+#include<iostream>
+using namespace  std;
+class Student
+{
+	public:
+	string name,roll,coll,branch,phone;
+	int bc;
+	double per;
+	Student(string r,string n,string col,string bran,int b,double per,string ph);//Parameteized constructor
+	void display();
+	
+};
+//Using Function outside the class
+void Student::display()//call this method 
+	{
+		cout<<roll<<" "<<name<<" "<<coll<<" ";
+		cout<<branch<<" "<<bc<<" "<<phone<<" "<<per<<endl;
+	}
+//Using constructor outside the class
+Student::Student(string r,string n,string col,string bran,int b,double per,string ph)
+{
+		this->roll=r; //this acts like a object
+		this->name=n;
+		this->coll=col;
+		this->branch=bran;
+		this->bc=b;
+		this->phone=ph;
+		this->per=per;
+		
+	
+	}
+
+
+int main()
+{
+	Student s1("123","bhanu","aditya","cse",0,9.08,"9912707059");
+	s1.display();
+	
+}
