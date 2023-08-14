@@ -1,0 +1,47 @@
+# cpp
+#include<iostream>
+/*
+Simple Request
+inline function:
+synatx:
+inline void funname(arglist)
+{
+	//statements;
+}*/
+
+using namespace std;
+class student
+{
+	public:string name,roll;
+	//Default
+	student()
+	{
+		name="Bhanu";
+		roll="22A91A05K0";
+	}
+	//Parameterized
+	student(string name,string roll)
+	{
+		this->name=name;
+		this->roll=roll;
+	}
+	//Copy
+	student(student &s){
+		this->name=s.name;
+		this->roll=s.roll;
+	}
+	//Use of line in a function
+	inline void display()
+	{
+		cout<<name<<" "<<roll<<endl;
+		
+	}
+};
+int main()
+{
+	student s1,s2("Sudeshna","22A91A05H6");
+	student s3(s1);
+	s1.display();
+	s2.display();
+	s3.display();
+}
