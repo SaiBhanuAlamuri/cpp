@@ -1,0 +1,50 @@
+
+#include<iostream>
+#include<string>
+using namespace std;
+class hostel{
+	public:
+		static string hostelname;
+		string name,warname;
+		int room,count;
+	hostel(string name,string warname,int room,int count);
+	void display();
+	void static dispaly()
+	{
+		cout<<"Hostel Name:"<<hostelname<<endl;
+	}
+	
+};
+hostel::hostel(string name,string warname,int room,int count)
+{
+		this->name=name;
+		this->warname=warname;
+		this->room=room;
+		this->count=count;
+}
+void hostel::display()
+{
+		cout<<"\n"<<endl;
+		cout<<"My Name:"<<name<<endl;
+		cout<<"Warden Nmae:"<<warname<<endl;
+		cout<<"Room Number:"<<room<<endl;
+		cout<<"Count per Room:"<<count<<endl;
+	}
+string hostel::hostelname="Lady's Home Place";
+
+int main()
+{
+	string name,warname;
+	int room,count;
+	cout<<"Enter Ur Name "<<endl;
+	getline(cin,name);
+	cout<<"Enter Ur Warden Name"<<endl;
+	getline(cin,warname);
+	cout<<"Enter Count"<<endl;
+	cin>>count;
+	cout<<"Enter Room Number"<<endl;
+	cin>>room;
+	hostel obj(name,warname,room,count);
+	obj.display();	
+	obj.dispaly();
+}
