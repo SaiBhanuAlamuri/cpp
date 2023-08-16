@@ -1,0 +1,25 @@
+# cpp
+#include<iostream>
+using namespace std;
+int staticfun()
+{
+	cout<<"from static:"<<endl;
+	static int age=0;
+	age++;
+	return age;
+}
+int nonstatic()
+{
+	cout<<"from non- static"<<endl;
+	int  age=0;
+	age++;
+	return age;
+}
+int main()
+{
+	cout<<staticfun()<<"\n";
+	cout<<staticfun()<<"\n";
+	cout<<nonstatic()<<"\n";
+	cout<<nonstatic()<<"\n";
+	
+}
