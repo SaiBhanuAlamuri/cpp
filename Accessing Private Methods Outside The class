@@ -1,0 +1,46 @@
+# cpp
+/*22A91A05K0*/
+#include<iostream>
+#include<string>
+using namespace std;
+class hostel
+{
+        private:
+		string name,warden;
+		int count;
+		public:
+	     hostel(string name,string warden,int count)
+		{
+			this->name=name;
+			this->warden=warden;
+			this->count=count;
+		}
+		void display()
+		{
+			cout<<name<<endl;
+			cout<<warden<<endl;
+			cout<<count<<endl;
+		}
+		int fun(int count)
+		{
+			count=count;
+			return 2*count;
+			
+		}
+		
+};
+int main()
+{
+	string name,warden;
+	int count,res;
+	cout<<"Enter Your Name"<<endl;
+	getline(cin,name);
+	cout<<"Enter Your Warden Name"<<endl;
+	getline(cin,warden);
+	cout<<"Number Of RoomMates"<<endl;
+	cin>>count;
+	hostel s1(name,warden,count);
+	s1.display();
+	res=s1.fun(8);
+	cout<<res;
+	}
