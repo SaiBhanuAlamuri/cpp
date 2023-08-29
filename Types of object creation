@@ -1,0 +1,40 @@
+# cpp
+#include<bits/stdc++.h>
+/*
+Types of declaration of object :
+1)Uses stack memory ==>object reference 
+2)Heap memory==>pointer reference(here we need to  use -> since new object is a pointer)
+*/
+using namespace std;
+class HumanBeing
+{
+	public:
+		string name;
+		void introduce()
+		{
+			cout<<"hi my name is"<<" "<<name<<endl;
+		}
+};
+int main()
+{
+	HumanBeing Bhanu;
+	Bhanu.name="Bhanu";
+	Bhanu.introduce();
+	
+//	HumanBeing *New=new HumanBeing;
+//	New->name="New Name";
+//	New->introduce();
+
+/*If u want to assign one object to another object
+*Here you are  storing the address of object(bhanu) in another object(ramya)
+*So U can access the the object bhanu from ramya
+so if we print ramya->introduce();
+u will get "hi my name is bhanu"
+*/
+
+
+HumanBeing *ramya=&Bhanu;
+ramya->introduce();//(*ramya).introduce;
+	
+	
+}
